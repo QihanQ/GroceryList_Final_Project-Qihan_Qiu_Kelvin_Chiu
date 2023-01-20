@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grocery List</title>
+        <link rel = "stylesheet" href = "src/style.css" />
+        <script src = "src/script.js"></script>
+    </head>
+
+    <body>
+        <div class = "start-screen">
+            <img id = "logo" src = "src/logo.png" />
+            <br />
+            <div id = "title">
+				Grocery List Maker
+			</div>
+            <img id = "fruit" src = "src/foods.webp" />
+            <br />
+			<span id = "container">
+				<span class = "btn" id = "video-panel-start">Start</span>
+			</span>
+        </div> 
+		<div id = "video-panel">
+			<span id = "video-panel-text">Curious what a shopping list is?
+				<br />
+				<iframe src="https://www.youtube.com/embed/XQXzgPfvUcg?start=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+				</iframe>
+				<br />
+				<span class = "btn" id = "video-panel-end">Continue</span>
+			</span>
+		</div>
+        <div class = "list-screen">
+			<div id = "item-list">
+			    <h1>
+					Grocery List Items
+				</h1>
+				<ol id = "items"></ol>
+			</div>
+			<div id = "control-panel">
+					<div id="updown">
+						<input type = "text"  onkeypress = "return event.charCode >= 48 && event.charCode <= 57" id="changePos" placeholder = "Item Number">
+						<br />
+						<div class="move" id="Move-Up">Move up</div>
+						<div class="move" id="Move-Down">Move down</div>
+						<br />
+					</div>
+					<div id="add">
+						<input type = "text" id = "newItem" placeholder = "Item Name">
+						<br />
+						<div class="move" id="Add-Item">Add Item</div>
+						<br />
+					</div>
+					<div id="delete">
+						<input type= "text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="deleteItem" placeholder = "Item Number">
+						<br />
+						<div class="move" id="Delete-Item">Delete Item</div>
+						<br />
+					</div>
+					<div id="addRemove">
+						<input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="changeQuant" placeholder = "Item Number">
+						<br />
+						<div class="move" id="Add-One">Increase</div>
+						<div class="move" id="Remove-One">Decrease</div>
+						<br />
+					</div>
+			</div>
+    </body>
+</html>
